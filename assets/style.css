@@ -1,0 +1,123 @@
+/*
+Paleta de Cores:
+
+*/
+
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: rgb(76, 0, 255);
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: white;
+    height: 500px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.658);
+
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+}
+
+section.login > div.foto {
+    display: block;
+    background: blue url(./images/img-background.jpg) no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+section.login > div.formulario {
+    display: block;
+    padding: 10px;
+}
+
+div.formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div.formulario > p {
+    font-size: 0.8em;
+}
+
+.dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dados input[type="email"] {
+    margin-top: 1rem;
+    width: 30%;
+    padding: 5px 30px;
+    font-size: 15px;
+}
+
+.dados input[type="password"] {
+    margin-top: 1rem;
+    width: 30%;
+    padding: 5px 30px;
+    font-size: 15px;
+}
+
+.entrar {
+    font-size: 15px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+}
+
+.entrar:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.entrar:active {
+    transform: translate(0em, 0.2em);
+   }
+
+.entrar-conta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao-esqueci {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+div.criar-conta {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
