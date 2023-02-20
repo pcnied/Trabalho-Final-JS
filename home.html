@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/media-query.css">
     <title>Document</title>
 </head>
 <body>
-    <a href="./index.html"></a>
+    <main>
+        <section class="anotacoes">
+            
+            <div class="informacoes">
+                <h1>Anotações</h1>
+                <p>Você pode inserir suas anotações abaixo. Basta clicar no botão "Salvar Anotação".</p>
+            </div>
+            <div class="descricao">
+                <label for="tituloDescricao"></label>
+                <input type="text" name="tituloDescricao" id="tituloDescricao" placeholder="Título da anotação" required>
+            </div>
+            <div class="descricao">
+                <label for="description"></label>
+                <input type="text" name="description" id="description" placeholder="Descrição" required>
+            </div>
+            <div class="btoSalvar">
+            <button class="botao">Salvar Anotação</button>
+            </div>
+            
+        </section>
+    </main>
+    <script src="./index.js"></script>
+    
 </body>
 </html>
