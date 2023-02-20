@@ -45,17 +45,17 @@ section.login > div.foto {
     height: 200px;
 }
 
-section.login > div.formulario {
+section.login > .formulario {
     display: block;
     padding: 10px;
 }
 
-div.formulario > h1 {
+.formulario > h1 {
     text-align: center;
     margin-bottom: 10px;
 }
 
-div.formulario > p {
+.formulario > p {
     font-size: 0.8em;
 }
 

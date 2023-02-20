@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,40 +9,43 @@
     <link rel="stylesheet" href="./assets/media-query.css">
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <section class="login">
             <div class="foto">
 
             </div>
-            <div class="formulario">
+
+            <form class="formulario">
                 <h1>Login</h1>
                 <p>Seja bem vindo(a)! Para fazer o login e acessar suas anotações, insira sua senha e e-mail.</p>
-                    <div class="dados">
-                        <input type="email" name="login" id="ilogin" placeholder="Seu e-mail"
-                        autocomplete="email" required maxlength="30">
-                        
-                    </div>
-                    <div class="dados">
-                        <input type="password" name="senha" id="isenha" placeholder="Sua senha"
+                <div class="dados">
+                    <input type="email" name="login" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required
+                        maxlength="30">
+
+                </div>
+                <div class="dados">
+                    <input type="password" name="senha" id="isenha" placeholder="Sua senha"
                         autocomplete="current-password" required minlength="8" maxlength="20">
-                    </div>
+                </div>
+                <br>
+                <div class="entrar-conta">
+                    <a href="./home.html"><button class="botao" type="submit">Entrar</button></a>
                     <br>
-                    <div class="entrar-conta">
-                    <a href="./home.html"><button class="botao">Entrar</button></a>
-                        <br>
-                        <button class="botao"> Esqueci a senha</button>
-                    </div>
-                    
-                    <div class="criar-conta">
-                        <p>Ainda não tem conta?</p>
-                        <a href="./account.html"><button class="botao">Criar conta</button></a>
-                    </div>
-                    
+                </div>
+            </form>
+            <button class="botao">Esqueci a senha</button>
+
+            <div class="criar-conta">
+                <p>Ainda não tem conta?</p>
+                <a href="./account.html"><button class="botao">Criar conta</button></a>
             </div>
-            
+
+
         </section>
     </main>
     <script src="./index.js"></script>
 </body>
+
 </html>
