@@ -68,8 +68,8 @@ section.login > .formulario {
 
 .dados input[type="email"] {
     margin-top: 1rem;
-    width: 30%;
-    padding: 5px 30px;
+    width: 50%;
+    padding: 5px 10px;
     font-size: 15px;
     margin: 10px;
     margin-top: 30px;
@@ -77,8 +77,8 @@ section.login > .formulario {
 
 .dados input[type="password"] {
     margin-top: 1rem;
-    width: 30%;
-    padding: 5px 30px;
+    width: 50%;
+    padding: 5px 10px;
     font-size: 15px;
     margin: 15px;
 }

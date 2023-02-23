@@ -1,0 +1,431 @@
+/* .learn-more {
+   
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #2b2b30;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   } */
+
+
+/* RECADOS */
+
+section.recados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 200px;
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 10px 2%;
+}
+
+.meusRecados h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 40px;
+}
+
+.inputFlex{
+    width: 90%;
+    padding: 10px 2%;
+    display: flex;
+}
+
+.inputFlex input[type="text"]{
+    width: 50%;
+    padding: 8px 15px;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.inputFlex input[type="text"]:focus{
+    outline: 0;
+}
+
+.inputFlex input[type="button"]{
+    width: 10%;
+    padding: 8px 0;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.inputFlex input[type="button"]:hover{
+    background: #000000;
+    color: #ffffff;
+    
+
+}
+
+/* LIST */
+
+section.list{
+    width: 95%;
+    height: 120px;
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 10px 2%;
+}
+
+.infoRecados{
+    background-color:#000000;
+    width: 95%;
+    padding: 10px 2%;
+    display: flex;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 1px 0px #000000;;
+    color: #ffffff;
+}
+
+.infoRecados h3{
+    width: 22.3%;
+}
+
+.infoRecados h3:nth-of-type(3){
+    text-align: center;
+}
+
+.infoRecados h3:nth-of-type(4){
+    text-align: right;
+    padding-right: 15px;
+}
+
+#listaTarefas{
+    width: 95%;
+    padding: 10px 2%;
+    border: 1px solid #ccc;
+    list-style-type: none;
+}
+
+#listaTarefas li{
+    display: flex;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.idTarefa{
+    width: 10%;
+}
+
+.textoTarefa{
+    width: 40%;
+}
+
+.detailTarefa{
+    width: 30%;
+}
+
+.acao{
+    width: 5%;
+    font-size: 15px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    margin-right: 50px;
+}
+
+.acaoRed{
+    width: 5%;
+    font-size: 15px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+.acao:hover{
+    background:#3cc929;
+    color: #ffffff;
+    width:5%;
+}
+
+.acaoRed:hover{
+    background: #c92929 ;
+    color: #ffffff;
+    width: 8%;
+   
+}
+
+#janelaEdicao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #191818;
+    border: 1px solid #2f2e2e; 
+    width: 415px;
+    border-radius: 12px;
+    z-index: 200;
+    display: none;
+}
+
+#janelaEdicao.abrir{
+    display: block !important;
+    color: #fff;
+}
+
+#janelaEdicaoFundo {
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 100;
+    right: 0;
+    display: none;
+}
+
+#janelaEdicaoFundo.abrir {
+    display: block !important;
+}
+
+#btnFechar {
+    position: absolute;
+    top: -25px;
+    right: -18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #2d2c2c;
+    background-color: #2d2c2c;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.frm-linha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.frm-linha label {
+    margin-bottom: 7px;
+}
+
+.frm-linha input {
+    padding: 15px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid #191818;
+    font-size: 1.2rem;
+    background-color: #2d2c2c;
+    color: #fff;
+}
+
+.frm-linha button{
+    background-color: #2d2c2c;
+    border: 1px solid #191818;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: #ccc;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+.frm-linha button:hover {
+    background-color: #3c3a3a;
+}
+
+@media screen and (max-width: 900px) {
+    section.login{
+        width: 100%;
+    }
+
+    section.criarConta{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.login{
+        width: 100%;
+    }
+
+    section.criarConta{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgLogin{
+        width: 50%;
+        height: 100%
+    }
+
+    .imgLogin img{
+        width: 100%;
+    }
+
+    form{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    section.recados{
+        width: 100%;
+        height: 200px;
+        max-width: 500px;
+        margin: 30px auto;
+        
+    }
+
+    section.list{
+      
+        width: 100%;
+        height: 1200px;
+        max-width: 500px;
+        margin: 20px auto;
+
+    }
+
+    div.inputFlex > input[type="button"]{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #listaTarefas{
+        width: 100%;
+    }
+
+    #listaTarefas li{
+        width: 100%;
+    }
+
+    .acao{
+        width: 15%;
+        margin: 0;
+    }
+
+    .acaoRed{
+        width: 15%;
+    }
+
+    .infoRecados{
+        width: 100%;
+    }
+
+    .infoRecados h3{
+        width: 10%
+    }
+    .infoRecados h3:nth-of-type(2){
+        width: 30%;
+        text-align: center;
+    }
+    .infoRecados h3:nth-of-type(3){
+        width: 30%;
+    }
+
+    .infoRecados h3:nth-of-type(4){
+        width: 30%;
+        text-align: center;
+        padding-left: 30px;
+    }
+
+    .textoTarefa{
+        text-align: center;
+    }
+
+    .detailTarefa{
+        text-align: center;
+    }
+}
