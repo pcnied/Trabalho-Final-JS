@@ -10,6 +10,7 @@ formulario.addEventListener('submit', function(evento) {
     if(validacao) {
         alert('Login efetuado com sucesso!')
         window.location.href= 'home.html'
+        salvarSessionStorage(email)
     }
 })
 
@@ -35,4 +36,8 @@ function validarConta(conta, senha) {
     }
 
     return true
+}
+
+function salvarSessionStorage(email) {
+    sessionStorage.setItem('logado', email)
 }

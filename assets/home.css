@@ -124,7 +124,7 @@ section.recados{
     outline: 0;
 }
 
-.inputFlex input[type="button"]{
+.inputFlex button{
     width: 10%;
     padding: 8px 0;
     font-size: 20px;
@@ -135,11 +135,10 @@ section.recados{
     color: #fff;
 }
 
-.inputFlex input[type="button"]:hover{
+.inputFlex button:hover{
     background: #000000;
     color: #ffffff;
-    
-
+    cursor: pointer;
 }
 
 /* LIST */
