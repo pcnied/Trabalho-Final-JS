@@ -9,7 +9,8 @@ formulario.addEventListener('submit', function(evento) {
     if(validacao) {
         salvarLocalStorage({
             email: email,
-            senha: senha
+            senha: senha,
+            recados: []
         })
         alert('Conta criada com sucesso!')
     }
