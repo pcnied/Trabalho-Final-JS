@@ -2,16 +2,26 @@ const formulario = document.querySelector(".inputFlex")
 const inputDescricao = document.querySelector("#inputDescricao");
 const inputDetalhamento = document.querySelector("#inputDetalhamento");
 const listaTarefas = document.querySelector("#listaTarefas");
-let btnFechar = document.querySelector("#btnFechar");
-let btnAtualizarTarefa = document.querySelector("#btnAtualizarTarefa");
-let idTarefaEdicao = document.querySelector("#idTarefaEdicao");
-let tarefaEdicao = document.querySelector("#tarefaEdicao");
-let tarefaEdicaoDetalhamento = document.querySelector("#tarefaEdicaoDetalhamento");
-const KEY_CODE_ENTER = 13;
-const KEY_LOCAL_STORAGE = "listaDeTarefas";
-let dbTarefas = [];
+const janelaEdicao = document.querySelector("#janelaEdicao");
+const editarDescricao = document.querySelector("#tituloEdicao")
+const editarDetalhamento = document.querySelector("#tarefaEdicaoDetalhamento")
+const formularioEdicao = document.querySelector("#formularioEdicao")
+const idTarefaEdicao = document.querySelector("#idTarefaEdicao");
+const botaoFechar = document.querySelector("#btnFechar")
+// let btnFechar = document.querySelector("#btnFechar");
+// let btnAtualizarTarefa = document.querySelector("#btnAtualizarTarefa");
+
+// let tarefaEdicao = document.querySelector("#tarefaEdicao");
+// let tarefaEdicaoDetalhamento = document.querySelector("#tarefaEdicaoDetalhamento");
+// const KEY_CODE_ENTER = 13;
+// const KEY_LOCAL_STORAGE = "listaDeTarefas";
+// let dbTarefas = [];
 const emailLogado = sessionStorage.getItem("logado")
 const dadosDoUsuario = obterUsuarioLogado()
+
+btnFechar.addEventListener('click', function(event) {
+    janelaEdicao.setAttribute("style", "display: none")
+})
 
 formulario.addEventListener('submit', function(event) {
     event.preventDefault()
@@ -26,6 +36,23 @@ formulario.addEventListener('submit', function(event) {
     dadosDoUsuario.recados.push(recado)
     atualizarLocalStorage(dadosDoUsuario)
     criarRecado(recado)
+})
+
+formularioEdicao.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    const novoRecado = {
+        id: Number(idTarefaEdicao.innerHTML.replace("#", "")),
+        descricao: editarDescricao.value,
+        detalhamento: editarDetalhamento.value
+    }
+    
+    const encontrarId = dadosDoUsuario.recados.findIndex(recado => recado.id === novoRecado.id);
+
+    dadosDoUsuario.recados.splice(encontrarId, 1, novoRecado)
+    atualizarLocalStorage(dadosDoUsuario)
+    obterRecadosDoUsuario(dadosDoUsuario)
+    janelaEdicao.setAttribute("style", "display: none")
 })
 
 function obterUsuarioLogado() {
@@ -62,7 +89,7 @@ function criarRecado(recado) {
             <td>${recado.detalhamento}</td>
             <td>
                 <button class="botaoExcluir" onclick="excluirRecado(${recado.id})" >Excluir</button>
-                <button class="botaoEditar">Editar</button>
+                <button class="botaoEditar" onclick="editarRecado(${recado.id})">Editar</button>
             </td>
         </tr>
     `
@@ -82,9 +109,24 @@ function excluirRecado(id) {
     }
 }
 
+// função de alterar título e descrição
+function editarRecado(id) {
+    const recado = dadosDoUsuario.recados.find(function (recado) {
+        return recado.id == id
+    })
+    janelaEdicao.setAttribute("style", "display: block")
+    idTarefaEdicao.innerText = "#" + id
+    editarDescricao.value = recado.descricao
+    editarDetalhamento.value = recado.detalhamento
+}
+
+
+
 function atualizarLocalStorage(dadosDoUsuario) {
     localStorage.setItem(dadosDoUsuario.email, JSON.stringify(dadosDoUsuario))
 }
+
+
 
 
 
