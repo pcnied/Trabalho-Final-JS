@@ -1,5 +1,5 @@
-/* .learn-more {
-   
+.logout {
+    
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -10,26 +10,26 @@
     background: transparent;
     padding: 0;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    }
    
-   button.learn-more {
+   button.logout {
     width: 12rem;
     height: auto;
    }
    
-   button.learn-more .circle {
+   button.logout .circle {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #2b2b30;
+    background: rgb(0, 0, 0);
     border-radius: 1.625rem;
    }
    
-   button.learn-more .circle .icon {
+   button.logout .circle .icon {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -38,7 +38,7 @@
     background: #fff;
    }
    
-   button.learn-more .circle .icon.arrow {
+   button.logout .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
@@ -46,7 +46,7 @@
     background: none;
    }
    
-   button.learn-more .circle .icon.arrow::before {
+   button.logout .circle .icon.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -58,7 +58,7 @@
     transform: rotate(45deg);
    }
    
-   button.learn-more .button-text {
+   button.logout .button-text {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -67,7 +67,7 @@
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: white;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -85,7 +85,7 @@
    
    button:hover .button-text {
     color: #fff;
-   } */
+   }
 
 
 /* RECADOS */
@@ -103,7 +103,7 @@ section.recados{
 }
 
 .meusRecados h1{
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
 }
 
@@ -130,18 +130,19 @@ section.recados{
     font-size: 20px;
     text-align: center;
     background-color: transparent;
+    border-radius: 10px;
     border: none;
-    background-color: rgb(14, 19, 85);
+    background-color: rgb(32, 16, 110);
     color: #fff;
 }
 
 .inputFlex button:hover{
-    background: #000000;
+    background: rgb(31, 52, 121);
     color: #ffffff;
     cursor: pointer;
 }
 
-/* LIST */
+/* LISTA */
 
 section.list{
     width: 95%;
@@ -166,11 +167,6 @@ table {
   th {
     background-color: white;
   }
-  
-  /* tr:nth-child(even) {
-    background-color: #dddddd;
-  } */
-  
 
 #listaTarefas{
     width: 95%;
@@ -233,7 +229,7 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #191818;
+    background-color: #10297a;
     border: 1px solid #2f2e2e; 
     width: 415px;
     border-radius: 12px;
@@ -269,8 +265,8 @@ table {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid #2d2c2c;
-    background-color: #2d2c2c;
+    border: 1px solid #0f1057;
+    background-color: #0f1057;
     color: #fff;
     outline: none;
     cursor: pointer;
@@ -296,18 +292,18 @@ form {
     padding: 15px;
     border-radius: 12px;
     outline: none;
-    border: 1px solid #191818;
+    border: 1px solid #000000;
     font-size: 1.2rem;
-    background-color: #2d2c2c;
-    color: #fff;
+    background-color: #4a5b97;
+    color: #ffffff;
 }
 
 .frm-linha button{
-    background-color: #2d2c2c;
-    border: 1px solid #191818;
+    background-color: #172746;;
+    border: 1px solid #000000;
     padding: 7px;
     margin-bottom: 10px;
-    border-radius: 12px;
+    border-radius: 15px;
     color: #ccc;
     cursor: pointer;
     height: 50px;
@@ -316,113 +312,6 @@ form {
 }
 
 .frm-linha button:hover {
-    background-color: #3c3a3a;
+    background-color: #4a5b97;
 }
 
-@media screen and (max-width: 900px) {
-    section.login{
-        width: 100%;
-    }
-
-    section.criarConta{
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    section.login{
-        width: 100%;
-    }
-
-    section.criarConta{
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .imgLogin{
-        width: 50%;
-        height: 100%
-    }
-
-    .imgLogin img{
-        width: 100%;
-    }
-
-    form{
-        width: 50%;
-        height: 100%;
-    }
-}
-
-@media screen and (max-width: 625px) {
-    section.recados{
-        width: 100%;
-        height: 200px;
-        max-width: 500px;
-        margin: 30px auto;
-        
-    }
-
-    section.list{
-      
-        width: 100%;
-        height: 1200px;
-        max-width: 500px;
-        margin: 20px auto;
-
-    }
-
-    div.inputFlex > input[type="button"]{
-        width: 100%;
-        max-width: 500px;
-    }
-
-    #listaTarefas{
-        width: 100%;
-    }
-
-    #listaTarefas li{
-        width: 100%;
-    }
-
-    .acao{
-        width: 15%;
-        margin: 0;
-    }
-
-    .acaoRed{
-        width: 15%;
-    }
-
-    .infoRecados{
-        width: 100%;
-    }
-
-    .infoRecados h3{
-        width: 10%
-    }
-    .infoRecados h3:nth-of-type(2){
-        width: 30%;
-        text-align: center;
-    }
-    .infoRecados h3:nth-of-type(3){
-        width: 30%;
-    }
-
-    .infoRecados h3:nth-of-type(4){
-        width: 30%;
-        text-align: center;
-        padding-left: 30px;
-    }
-
-    .textoTarefa{
-        text-align: center;
-    }
-
-    .detailTarefa{
-        text-align: center;
-    }
-}
