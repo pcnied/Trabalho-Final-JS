@@ -156,17 +156,24 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    color: black;
   }
-  
-  td, th {
+
+td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    color: white;
   }
-
-  th {
+  
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: black;
     background-color: white;
   }
+
 
 #listaTarefas{
     width: 95%;
