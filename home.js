@@ -8,14 +8,6 @@ const editarDetalhamento = document.querySelector("#tarefaEdicaoDetalhamento")
 const formularioEdicao = document.querySelector("#formularioEdicao")
 const idTarefaEdicao = document.querySelector("#idTarefaEdicao");
 const botaoFechar = document.querySelector("#btnFechar")
-// let btnFechar = document.querySelector("#btnFechar");
-// let btnAtualizarTarefa = document.querySelector("#btnAtualizarTarefa");
-
-// let tarefaEdicao = document.querySelector("#tarefaEdicao");
-// let tarefaEdicaoDetalhamento = document.querySelector("#tarefaEdicaoDetalhamento");
-// const KEY_CODE_ENTER = 13;
-// const KEY_LOCAL_STORAGE = "listaDeTarefas";
-// let dbTarefas = [];
 const emailLogado = sessionStorage.getItem("logado")
 const dadosDoUsuario = obterUsuarioLogado()
 
@@ -98,7 +90,7 @@ function criarRecado(recado) {
 function excluirRecado(id) {
     const confirmacao = confirm('Tem certeza que quer excluir?')
     if(confirmacao) {
-        // pegar recado com o id que está no parametro dessa função
+        // Pegar recado com o id que está no parametro dessa função
         const indiceRecado = dadosDoUsuario.recados.findIndex(function (recado) {
             return recado.id == id
         })
@@ -109,7 +101,7 @@ function excluirRecado(id) {
     }
 }
 
-// função de alterar título e descrição
+// Função de alterar título e descrição
 function editarRecado(id) {
     const recado = dadosDoUsuario.recados.find(function (recado) {
         return recado.id == id
